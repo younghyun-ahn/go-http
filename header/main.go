@@ -25,8 +25,8 @@ func main() {
 	// 헤더 직접 설정
 	req.Header.Add("Content-Type", "image/jpeg")
 	// 헬퍼메서드 이용
-	req.SetBasicAuth("유저명", "패스워드") // --basic -u 유저명:패스워드
-	req.AddCookie(&http.Cookie{Name:"test", Value:"value"}) // -c 
+	req.SetBasicAuth("유저명", "패스워드")                           // --basic -u 유저명:패스워드
+	req.AddCookie(&http.Cookie{Name: "test", Value: "value"}) // -c
 
 	res, err := client.Do(req)
 	if err != nil {
